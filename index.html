@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="es"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;UroTarget | Urooncología Latinoamérica&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/lucide@latest"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1, h2, h3, .brand-font {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Montserrat', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.gradient-text {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-background-clip: text;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-text-fill-color: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.circle-pattern {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-image: radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),</p>
+<p class="p1"><span class="Apple-converted-space">                              </span>radial-gradient(circle at 80% 80%, rgba(30, 58, 95, 0.1) 0%, transparent 50%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.glass-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.7);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(255, 255, 255, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hover-lift {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease, box-shadow 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hover-lift:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-5px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 20px 40px rgba(30, 58, 95, 0.15);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-reveal {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(30px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: opacity 0.8s ease, transform 0.8s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-reveal.visible {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-slate-50 text-slate-800 overflow-x-hidden"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Navigation --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-center h-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center space-x-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Logo Recreation --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative w-12 h-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-[#1e3a5f] rounded-full opacity-90"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute bottom-0 left-0 w-8 h-8 bg-[#0ea5e9] rounded-full opacity-80"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute bottom-0 right-0 w-8 h-8 bg-[#0284c7] rounded-full opacity-85"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="brand-font text-2xl font-black text-slate-900 leading-none tracking-tight"&gt;UroTarget&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs text-slate-500 font-medium tracking-widest uppercase"&gt;Urooncología&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="hidden md:flex items-center space-x-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#profesionales" class="text-sm font-semibold text-slate-600 hover:text-[#0ea5e9] transition-colors"&gt;Profesionales&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#pacientes" class="text-sm font-semibold text-slate-600 hover:text-[#0ea5e9] transition-colors"&gt;Pacientes&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#recursos" class="text-sm font-semibold text-slate-600 hover:text-[#0ea5e9] transition-colors"&gt;Recursos&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="bg-[#1e3a5f] text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-[#0ea5e9] transition-all duration-300 shadow-lg hover:shadow-xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Acceder</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="md:hidden p-2" onclick="toggleMenu()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i data-lucide="menu" class="w-6 h-6 text-slate-700"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Mobile Menu --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-200 absolute w-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="px-4 py-4 space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#profesionales" class="block text-slate-700 font-medium py-2"&gt;Profesionales&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#pacientes" class="block text-slate-700 font-medium py-2"&gt;Pacientes&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#recursos" class="block text-slate-700 font-medium py-2"&gt;Recursos&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Hero Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden circle-pattern"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid lg:grid-cols-2 gap-12 items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section-reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="w-2 h-2 bg-[#0ea5e9] rounded-full animate-pulse"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-sm font-semibold text-[#1e3a5f]"&gt;Plataforma Educativa Latam&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h1 class="text-4xl lg:text-6xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Expandiendo el conocimiento de la &lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="gradient-text"&gt;Uro-Oncología en LATAM&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Conectando profesionales de la salud con los últimos avances en cáncer urológico.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Recursos especializados para Latinoamérica.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex flex-col sm:flex-row gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button onclick="scrollToSection('profesionales')" class="bg-[#1e3a5f] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#0ea5e9] transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center space-x-2 group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;Soy Profesional&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button onclick="scrollToSection('pacientes')" class="bg-white text-[#1e3a5f] border-2 border-[#1e3a5f] px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 transition-all duration-300 flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;Información para Pacientes&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="relative section-reveal" style="transition-delay: 200ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute -inset-4 bg-gradient-to-r from-[#1e3a5f] to-[#0ea5e9] rounded-3xl opacity-20 blur-2xl"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="relative bg-white rounded-3xl shadow-2xl p-8 border border-slate-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="grid grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="bg-blue-50 rounded-2xl p-6 hover-lift cursor-pointer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="users" class="w-8 h-8 text-[#0ea5e9] mb-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;h3 class="font-bold text-slate-900"&gt;+500&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;p class="text-sm text-slate-600"&gt;Especialistas&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="bg-slate-50 rounded-2xl p-6 hover-lift cursor-pointer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="book-open" class="w-8 h-8 text-[#1e3a5f] mb-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;h3 class="font-bold text-slate-900"&gt;+200&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;p class="text-sm text-slate-600"&gt;Publicaciones&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="space-y-4 mt-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="bg-sky-50 rounded-2xl p-6 hover-lift cursor-pointer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="video" class="w-8 h-8 text-[#0284c7] mb-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;h3 class="font-bold text-slate-900"&gt;+50&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;p class="text-sm text-slate-600"&gt;Webinars&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="bg-blue-50 rounded-2xl p-6 hover-lift cursor-pointer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="globe" class="w-8 h-8 text-[#0ea5e9] mb-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;h3 class="font-bold text-slate-900"&gt;15&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;p class="text-sm text-slate-600"&gt;Países Latam&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Professionals Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="profesionales" class="py-24 bg-white relative"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-16 section-reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-[#0ea5e9] font-bold tracking-wider uppercase text-sm"&gt;Área Profesional&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-4xl lg:text-5xl font-black text-slate-900 mt-2 mb-4"&gt;Para Especialistas&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-slate-600 max-w-2xl mx-auto text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Accede a contenido científico de alto nivel, casos clínicos y herramientas de colaboración interdisciplinaria.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-3 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="group section-reveal" style="transition-delay: 100ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-slate-50 rounded-3xl p-8 h-full hover-lift border border-slate-100 relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute top-0 right-0 w-32 h-32 bg-[#0ea5e9] opacity-5 rounded-full -mr-16 -mt-16"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-14 h-14 bg-[#1e3a5f] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="graduation-cap" class="w-7 h-7 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-slate-900 mb-3"&gt;Educación Médica&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-600 mb-6 leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Cursos acreditados, talleres prácticos y simposios virtuales con expertos internacionales en urooncología.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="inline-flex items-center text-[#0ea5e9] font-semibold hover:text-[#1e3a5f] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Explorar cursos &lt;i data-lucide="chevron-right" class="w-4 h-4 ml-1"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="group section-reveal" style="transition-delay: 200ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-slate-50 rounded-3xl p-8 h-full hover-lift border border-slate-100 relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute top-0 right-0 w-32 h-32 bg-[#0284c7] opacity-5 rounded-full -mr-16 -mt-16"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-14 h-14 bg-[#0ea5e9] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="microscope" class="w-7 h-7 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-slate-900 mb-3"&gt;Investigación&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-600 mb-6 leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Acceso a ensayos clínicos, publicaciones recientes y oportunidades de colaboración en investigación multicéntrica.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="inline-flex items-center text-[#0ea5e9] font-semibold hover:text-[#1e3a5f] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Ver investigaciones &lt;i data-lucide="chevron-right" class="w-4 h-4 ml-1"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="group section-reveal" style="transition-delay: 300ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-slate-50 rounded-3xl p-8 h-full hover-lift border border-slate-100 relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute top-0 right-0 w-32 h-32 bg-[#1e3a5f] opacity-5 rounded-full -mr-16 -mt-16"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-14 h-14 bg-[#0284c7] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="message-circle" class="w-7 h-7 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-slate-900 mb-3"&gt;Comunidad&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-600 mb-6 leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Foros de discusión, second opinions y red de contactos con oncólogos, urólogos y especialistas de la región.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="inline-flex items-center text-[#0ea5e9] font-semibold hover:text-[#1e3a5f] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Unirse a la red &lt;i data-lucide="chevron-right" class="w-4 h-4 ml-1"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-16 bg-[#1e3a5f] rounded-3xl p-8 lg:p-12 section-reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-col lg:flex-row items-center justify-between gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-2xl font-bold mb-2"&gt;¿Eres residente o fellow?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-blue-100"&gt;Accede a recursos exclusivos y mentoría gratuita para formación especializada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="bg-white text-[#1e3a5f] px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition-colors whitespace-nowrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Registrarse como Residente</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Patients Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="pacientes" class="py-24 bg-slate-50 relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute inset-0 opacity-30"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="absolute top-0 left-0 w-96 h-96 bg-[#0ea5e9] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="absolute top-0 right-0 w-96 h-96 bg-[#1e3a5f] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-16 section-reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-[#0ea5e9] font-bold tracking-wider uppercase text-sm"&gt;Área de Pacientes&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-4xl lg:text-5xl font-black text-slate-900 mt-2 mb-4"&gt;Información para Pacientes&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-slate-600 max-w-2xl mx-auto text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Recursos claros, confiables y comprensibles sobre cáncer de próstata, riñón, vejiga y testículo.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid lg:grid-cols-2 gap-12 items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="space-y-6 section-reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border-l-4 border-[#0ea5e9] cursor-pointer group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-start space-x-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#0ea5e9] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="shield" class="w-6 h-6 text-[#0ea5e9] group-hover:text-white transition-colors"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="font-bold text-slate-900 text-lg mb-1"&gt;Prevención y Detección&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-slate-600 text-sm"&gt;Guías sobre screening, factores de riesgo y hábitos saludables para la prevención del cáncer urológico.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border-l-4 border-[#0284c7] cursor-pointer group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-start space-x-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#0284c7] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="clipboard-list" class="w-6 h-6 text-[#0284c7] group-hover:text-white transition-colors"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="font-bold text-slate-900 text-lg mb-1"&gt;Tipos de Cáncer&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-slate-600 text-sm"&gt;Información detallada sobre cáncer de próstata, riñón, vejiga y testicular: síntomas, diagnóstico y tratamientos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border-l-4 border-[#1e3a5f] cursor-pointer group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-start space-x-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#1e3a5f] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="heart-handshake" class="w-6 h-6 text-[#1e3a5f] group-hover:text-white transition-colors"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="font-bold text-slate-900 text-lg mb-1"&gt;Apoyo y Recursos&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-slate-600 text-sm"&gt;Grupos de apoyo, orientación nutricional, manejo de efectos secundarios y calidad de vida durante el tratamiento.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border-l-4 border-[#0ea5e9] cursor-pointer group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-start space-x-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#0ea5e9] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="map-pin" class="w-6 h-6 text-[#0ea5e9] group-hover:text-white transition-colors"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="font-bold text-slate-900 text-lg mb-1"&gt;Centros Especializados&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-slate-600 text-sm"&gt;Directorio de centros de excelencia en urooncología en Latinoamérica.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section-reveal" style="transition-delay: 200ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white rounded-3xl shadow-xl p-8 border border-slate-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center space-x-3 mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="w-10 h-10 bg-[#0ea5e9] rounded-full flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="search" class="w-5 h-5 text-white"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl font-bold text-slate-900"&gt;Encuentra Información&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="relative"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input type="text" placeholder="Buscar temas (ej: próstata, quimioterapia...)"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>class="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] focus:border-transparent transition-all"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                            </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex flex-wrap gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="px-4 py-2 bg-blue-50 text-[#0ea5e9] rounded-full text-sm font-medium cursor-pointer hover:bg-[#0ea5e9] hover:text-white transition-colors"&gt;Cáncer de Próstata&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="px-4 py-2 bg-blue-50 text-[#0ea5e9] rounded-full text-sm font-medium cursor-pointer hover:bg-[#0ea5e9] hover:text-white transition-colors"&gt;Cáncer de Riñón&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="px-4 py-2 bg-blue-50 text-[#0ea5e9] rounded-full text-sm font-medium cursor-pointer hover:bg-[#0ea5e9] hover:text-white transition-colors"&gt;Vejiga&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="px-4 py-2 bg-blue-50 text-[#0ea5e9] rounded-full text-sm font-medium cursor-pointer hover:bg-[#0ea5e9] hover:text-white transition-colors"&gt;Testículo&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="px-4 py-2 bg-slate-100 text-slate-600 rounded-full text-sm font-medium cursor-pointer hover:bg-slate-200 transition-colors"&gt;FAQ&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="mt-8 pt-8 border-t border-slate-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold text-slate-900 mb-4"&gt;Recursos Destacados&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;a href="#" class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 transition-colors group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center space-x-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="file-text" class="w-5 h-5 text-[#0ea5e9]"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="text-slate-700 font-medium group-hover:text-[#0ea5e9]"&gt;Guía del Paciente: Cáncer de Próstata&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="download" class="w-4 h-4 text-slate-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;a href="#" class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 transition-colors group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center space-x-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="play-circle" class="w-5 h-5 text-[#0ea5e9]"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="text-slate-700 font-medium group-hover:text-[#0ea5e9]"&gt;Video: Entendiendo tu Diagnóstico&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="external-link" class="w-4 h-4 text-slate-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Resources/News Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="recursos" class="py-24 bg-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col md:flex-row justify-between items-end mb-12 section-reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-[#0ea5e9] font-bold tracking-wider uppercase text-sm"&gt;Actualizaciones&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-4xl font-black text-slate-900 mt-2"&gt;Últimos Contenidos&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-[#0ea5e9] font-semibold hover:text-[#1e3a5f] transition-colors mt-4 md:mt-0 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Ver todos &lt;i data-lucide="arrow-right" class="w-4 h-4 ml-2"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-3 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;article class="group cursor-pointer section-reveal" style="transition-delay: 100ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative overflow-hidden rounded-2xl mb-4 aspect-[4/3]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute inset-0 bg-gradient-to-t from-[#1e3a5f] to-transparent opacity-0 group-hover:opacity-60 transition-opacity z-10"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-full h-full bg-slate-200 flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="image" class="w-12 h-12 text-slate-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute top-4 left-4 z-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="bg-[#0ea5e9] text-white text-xs font-bold px-3 py-1 rounded-full"&gt;Congreso&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center space-x-2 text-sm text-slate-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="calendar" class="w-4 h-4"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;15 Nov 2025&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-slate-900 group-hover:text-[#0ea5e9] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Resumen SLU 2025: Avances en Inmunoterapia</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-600 line-clamp-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Los principales hallazgos presentados en el congreso anual de urología latinoamericana.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;article class="group cursor-pointer section-reveal" style="transition-delay: 200ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative overflow-hidden rounded-2xl mb-4 aspect-[4/3]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute inset-0 bg-gradient-to-t from-[#1e3a5f] to-transparent opacity-0 group-hover:opacity-60 transition-opacity z-10"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-full h-full bg-slate-200 flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="image" class="w-12 h-12 text-slate-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute top-4 left-4 z-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="bg-[#0284c7] text-white text-xs font-bold px-3 py-1 rounded-full"&gt;Guía Clínica&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center space-x-2 text-sm text-slate-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="calendar" class="w-4 h-4"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;10 Nov 2025&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-slate-900 group-hover:text-[#0ea5e9] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Nuevas Guías EAU 2025: Cáncer de Vejiga Musculo-Invasivo</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-600 line-clamp-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Actualización de protocolos de tratamiento neoadyuvante y cistectomía radical.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;article class="group cursor-pointer section-reveal" style="transition-delay: 300ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="relative overflow-hidden rounded-2xl mb-4 aspect-[4/3]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute inset-0 bg-gradient-to-t from-[#1e3a5f] to-transparent opacity-0 group-hover:opacity-60 transition-opacity z-10"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-full h-full bg-slate-200 flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="image" class="w-12 h-12 text-slate-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="absolute top-4 left-4 z-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="bg-[#1e3a5f] text-white text-xs font-bold px-3 py-1 rounded-full"&gt;Pacientes&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center space-x-2 text-sm text-slate-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i data-lucide="calendar" class="w-4 h-4"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;5 Nov 2025&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-bold text-slate-900 group-hover:text-[#0ea5e9] transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Nutrición durante el Tratamiento del Cáncer de Próstata</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-slate-600 line-clamp-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Recomendaciones dietéticas para pacientes en terapia hormonal y radioterapia.</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/article&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Newsletter Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-20 bg-[#1e3a5f] relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="absolute inset-0 opacity-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 section-reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl lg:text-4xl font-black text-white mb-4"&gt;Mantente Actualizado&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-blue-100 mb-8 text-lg"&gt;Recibe las últimas noticias, guías clínicas y oportunidades educativas directamente en tu correo.&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="email" placeholder="Tu correo electrónico" required</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] backdrop-blur-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="bg-[#0ea5e9] text-white px-8 py-4 rounded-full font-bold hover:bg-[#0284c7] transition-all duration-300 shadow-lg hover:shadow-xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Suscribirse</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Footer --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-4 gap-8 mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-span-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center space-x-3 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="relative w-10 h-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#1e3a5f] rounded-full opacity-90 border border-white/20"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="absolute bottom-0 left-0 w-6 h-6 bg-[#0ea5e9] rounded-full opacity-80 border border-white/20"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="absolute bottom-0 right-0 w-6 h-6 bg-[#0284c7] rounded-full opacity-85 border border-white/20"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="brand-font text-2xl font-black text-white"&gt;UroTarget&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-slate-400 max-w-sm leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Plataforma líder en educación y recursos para la urooncología en Latinoamérica. Conectando conocimiento médico con pacientes.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-white font-bold mb-4"&gt;Profesionales&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="hover:text-[#0ea5e9] transition-colors"&gt;Cursos Online&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="hover:text-[#0ea5e9] transition-colors"&gt;Webinars&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="hover:text-[#0ea5e9] transition-colors"&gt;Casos Clínicos&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="hover:text-[#0ea5e9] transition-colors"&gt;Investigación&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="text-white font-bold mb-4"&gt;Pacientes&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="hover:text-[#0ea5e9] transition-colors"&gt;Tipos de Cáncer&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="hover:text-[#0ea5e9] transition-colors"&gt;Tratamientos&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="hover:text-[#0ea5e9] transition-colors"&gt;Centros Médicos&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;a href="#" class="hover:text-[#0ea5e9] transition-colors"&gt;Apoyo Psicológico&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-sm text-slate-500"&gt;&amp;copy; 2025 UroTarget. Todos los derechos reservados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex space-x-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="text-slate-400 hover:text-[#0ea5e9] transition-colors"&gt;&lt;i data-lucide="twitter" class="w-5 h-5"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="text-slate-400 hover:text-[#0ea5e9] transition-colors"&gt;&lt;i data-lucide="linkedin" class="w-5 h-5"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="#" class="text-slate-400 hover:text-[#0ea5e9] transition-colors"&gt;&lt;i data-lucide="youtube" class="w-5 h-5"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initialize Lucide icons</p>
+<p class="p1"><span class="Apple-converted-space">        </span>lucide.createIcons();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Mobile menu toggle</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function toggleMenu() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const menu = document.getElementById('mobileMenu');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>menu.classList.toggle('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Smooth scroll</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function scrollToSection(id) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const element = document.getElementById(id);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (element) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>element.scrollIntoView({ behavior: 'smooth', block: 'start' });</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Intersection Observer for animations</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const observerOptions = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>threshold: 0.1,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>rootMargin: '0px 0px -50px 0px'</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const observer = new IntersectionObserver((entries) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>entries.forEach(entry =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (entry.isIntersecting) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>entry.target.classList.add('visible');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}, observerOptions);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('.section-reveal').forEach((el) =&gt; observer.observe(el));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Navbar scroll effect</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let lastScroll = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const navbar = document.getElementById('navbar');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const currentScroll = window.pageYOffset;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (currentScroll &gt; 100) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>navbar.classList.add('shadow-md');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>navbar.classList.remove('shadow-md');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>lastScroll = currentScroll;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
